@@ -1,0 +1,204 @@
+html, body
+{
+width:100%;
+height:100%;
+margin: 0px;
+padding:0px;
+background-color:#fff5ee;
+}
+
+gwcontainer
+{
+width: 1005px;
+margin-top: 0px;
+margin-left:0px;
+
+}
+
+#gwheader
+{
+margin-left:0px;
+background-color:#be7b68;
+width: 995px;
+border: 1px solid #a0522d;
+font-color: #f0f0f0;
+font-family: "Trebuchet MS" , "Verdana" , sans-serif;
+}
+
+gwmenu
+{
+border-left: 1px solid #a0522d;
+background-color:#fff5ee;
+height:230px;
+width:195px;
+float:left;
+ }
+
+
+gwcontent
+{
+background-color:#c1a5b3;
+background-image: url("images/NavyRing.jpg");
+border-right: 1px solid #a0522d;
+height:760px;
+width: 800px;
+float:left;
+}
+
+
+#gwcontent2
+{
+background-color:#FFEBCD;
+border-left: 1px solid #a0522d;
+border-right: 1px solid #a0522d;
+height:600px;
+width: 799px;
+float:left;
+}
+
+
+#gwcontent3
+{
+background-color:#FFEBCD;
+border-left: 1px solid #a0522d;
+border-right: 1px solid #a0522d;
+height:1300px;
+width: 799px;
+float:left;
+}
+
+#gwcontent4
+{
+background-color:#FFEBCD;
+border-left: 1px solid #a0522d;
+border-right: 1px solid #a0522d;
+height:1300px;
+width: 1000px;
+float:left;
+}
+
+
+#gwfooter
+{
+clear:both;
+width: 995px;
+border: 1px solid #a0522d;
+left: 0px;
+height: 30px;
+text-align: center;
+font-color: #8b4513;
+line-height: 20px;
+padding-bottom: 2px;
+padding-top: 12px;
+font-family: "Trebuchet MS" , "Verdana" , sans-serif;
+font-size: 11px;
+font-weight: 500;
+text-decoration: none;
+background-color: #ffdab9;
+}
+
+
+
+#map_canvas {
+
+	width: 100%;
+	height: 40%;
+	color: #ffffff;
+
+}
+
+
+.center{text-align: center; color: white; font-color: white;
+}
+
+.whiteright {
+	text-align: right; color: white; font-color: white;
+}
+
+.fixed {
+font-family: "Courier New", Courier, monospace;
+font-size: 16px;
+}
+
+
+
+h1 {
+	margin: 5px 10px;
+	text-align: left;
+	color: rgb(0, 0, 0);
+	line-height: 25px;
+	letter-spacing: 1px;
+	padding-top: 8px;
+	padding-bottom: 12px;
+	font-family: "Trebuchet MS" , "Verdana" , sans-serif;
+	font-size: 25px;
+	font-weight: 900;
+	text-decoration: none;
+}
+h2 {
+	margin: 5px 10px;
+	text-align: left;
+	color: rgb(132, 73, 46);
+	line-height: 16px;
+	letter-spacing: 1px;
+	font-family: "Trebuchet MS" , "Verdana" , sans-serif;
+	font-size: 15px;
+	font-weight: 900;
+	text-decoration: none;
+}
+p {
+	margin: 8px 10px 10px;
+	text-align: left;
+	color: #000000;
+	line-height: 18px;
+	font-family: "Trebuchet MS" , "Verdana" , sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	word-spacing: 1px;
+}
+ol {
+	text-align: left;
+	color: #000000;
+	line-height: 16px;
+	font-family: "Trebuchet MS" , "Verdana" , sans-serif;
+	font-size: 13px; text-decoration: none;
+}
+ul {
+	text-align: left;
+	color: #000000;
+	line-height: 17px;
+	font-family: "Trebuchet MS" , "Verdana" , sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+}
+a img {
+	border: currentColor;
+}
+a:link {
+	color: #ff4500;
+	font-weight: 600;
+	text-decoration: none;
+}
+a:visited {
+	color: #009999;
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(139, 69, 19);
+	text-decoration: none;
+}
+a:active {
+	color: #c1a5b3;
+	text-decoration: none;
+}
+
+
+#gwinfowindow
+{
+background-color:#FFFFF0;
+font-color: #A52A2A;
+font-family: "Trebuchet MS" , "Verdana" , sans-serif;
+font-size: 12px;
+width: 250px;
+margin-top:0;
+}
