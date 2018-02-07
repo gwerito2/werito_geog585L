@@ -1,0 +1,8 @@
+body { height: 100%;
+				margin: 40px; <!--40px-->
+				padding: 40px;
+				background: lightsteelblue;
+				text-align: left}
+a {
+  color: red;
+}
