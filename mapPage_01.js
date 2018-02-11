@@ -13,7 +13,7 @@ function initialize() {
 			var options = {zoom: 16, center: gmap, mapTypeId: google.maps.MapTypeId.ROADMAP,
 				zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL},
 				scaleControl:true,
-			styles:[ { "featureType": "poi.park",
+			styles:[ 	{ "featureType": "poi.park",
 									"elementType": "labels",
 									"stylers": [ { "hue": "#00ffe6" },{ "visibility": "simplified" } ] },{ "featureType": "administrative",
 									"stylers": [ { "visibility": "off" } ] },{ "featureType": "road.local",
