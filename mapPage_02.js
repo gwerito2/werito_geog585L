@@ -10,10 +10,14 @@ function initialize() {
 			var eEllison = new google.maps.LatLng(35.208021,-106.652323)
 			var fEllison = new google.maps.LatLng(35.205812,-106.658503)*/
 
-			var options = {zoom: 16, center: gmap, mapTypeId: google.maps.MapTypeId.ROADMAP,
+			var options = {zoom: 16, center: gmap, mapTypeId: google.maps.MapTypeId.SATELLITE,
 				zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL},
 				scaleControl:true,
-			styles:[ { "featureType": "poi.park",
+				zoomControl: true,
+        mapTypeControl: true,
+        mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+        streetViewControl: false,
+			  styles:[ { "featureType": "poi.park",
 									"elementType": "labels",
 									"stylers": [ { "hue": "#00ffe6" },{ "visibility": "simplified" } ] },{ "featureType": "administrative",
 									"stylers": [ { "visibility": "off" } ] },{ "featureType": "road.local",

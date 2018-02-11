@@ -1,0 +1,63 @@
+html { height: 50%}
+
+			body { height: 100%;
+				margin: 40px;
+				padding: 0px;
+				background: #ccffff;
+				text-align: center}
+
+			P{text-indent:40px}
+
+			.tab{margin-left: 40px;}
+
+			#map_canvas {
+				height: 85%;
+				top: 0%;
+				border: 1px solid #999999}
+
+			#gwtopheader {clear:both;
+				border: 1px solid #999999;
+				left: 0px;
+				height: 80px;
+				text-align: center;
+				font-color: #8b4513;
+				line-height: 10px;
+				padding-bottom: 0px;
+				padding-top: 12px;
+				font-family: Calibri;
+				font-size: 25px;
+				font-weight: 400;
+				text-decoration: none;
+				background-color:#D8D8D8}
+
+			#gwmenu
+			{ border: 1px solid #999999;
+				background-color:#fff5ee;
+				height:399px;
+				width:100px;
+				float:left;}
+
+			#gwfooter {clear:both;
+				border: 1px solid #999999;
+				left: 0px;
+				height: 30px;
+				text-align: center;
+				font-color: #8b4513;
+				line-height: 20px;
+				padding-bottom: 5px;
+				padding-top: 12px;
+				font-family: Calibri;
+				font-size: 11px;
+				font-weight: 500;
+				text-decoration: none;
+				background-color: #D8D8D8}
+
+			#content {h2, p;
+				font-family: Calibri;
+				border: 1px solid #999999;
+				background-color: #D8D8D8}
+			a:link {
+				color: #3333ff;
+				font-weight: 600;
+				text-decoration: none;
+				}
