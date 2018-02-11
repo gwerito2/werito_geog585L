@@ -11,8 +11,8 @@ html { height: 50%}
 			.tab{margin-left: 40px;}
 
 			#map_canvas {
-				height: 85%;
-				top: 0%;
+				height: 100%;
+				top: 10%;
 				border: 1px solid #999999}
 
 			#gwtopheader {clear:both;
@@ -22,7 +22,7 @@ html { height: 50%}
 				text-align: center;
 				font-color: #8b4513;
 				line-height: 10px;
-				padding-bottom: 0px;
+				padding-bottom: 12px;
 				padding-top: 12px;
 				font-family: Calibri;
 				font-size: 25px;
