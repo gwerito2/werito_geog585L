@@ -58,15 +58,6 @@ function initialize() {
   },
   {
     "featureType": "administrative.land_parcel",
-    "elementType": "labels",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.land_parcel",
     "elementType": "labels.text.fill",
     "stylers": [
       {
@@ -94,19 +85,19 @@ function initialize() {
   },
   {
     "featureType": "poi",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
     "elementType": "labels.text.fill",
     "stylers": [
       {
         "color": "#93817c"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
       }
     ]
   },
@@ -148,10 +139,40 @@ function initialize() {
   },
   {
     "featureType": "road.arterial",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffff00"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
     "elementType": "geometry.stroke",
     "stylers": [
       {
-        "weight": 8
+        "color": "#00ff00"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#0000ff"
+      },
+      {
+        "visibility": "on"
       }
     ]
   },
@@ -166,6 +187,15 @@ function initialize() {
   },
   {
     "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
     "elementType": "geometry.stroke",
     "stylers": [
       {
@@ -175,10 +205,40 @@ function initialize() {
   },
   {
     "featureType": "road.highway",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
     "elementType": "labels.text",
     "stylers": [
       {
-        "weight": 8
+        "color": "#ff0000"
+      },
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "simplified"
       }
     ]
   },
@@ -201,20 +261,16 @@ function initialize() {
     ]
   },
   {
-    "featureType": "road.highway.controlled_access",
-    "elementType": "labels.text",
+    "featureType": "road.local",
     "stylers": [
       {
-        "color": "#e9bc62"
-      },
-      {
-        "weight": 8
+        "visibility": "off"
       }
     ]
   },
   {
     "featureType": "road.local",
-    "elementType": "labels",
+    "elementType": "geometry.fill",
     "stylers": [
       {
         "visibility": "off"
@@ -227,9 +283,6 @@ function initialize() {
     "stylers": [
       {
         "color": "#806b63"
-      },
-      {
-        "visibility": "off"
       }
     ]
   },
