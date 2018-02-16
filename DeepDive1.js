@@ -5,10 +5,10 @@ function initialize() {
 			var abikeends = new google.maps.LatLng(35.205593,-106.659393)
 			var bbikebegins = new google.maps.LatLng(35.207784,-106.651862)
 
-			var cEllison = new google.maps.LatLng(35.205488,-106.658685)
+			/*var cEllison = new google.maps.LatLng(35.205488,-106.658685)
 			var dEllison = new google.maps.LatLng(35.207784,-106.652184)
 			var eEllison = new google.maps.LatLng(35.208021,-106.652323)
-			var fEllison = new google.maps.LatLng(35.205812,-106.658503)
+			var fEllison = new google.maps.LatLng(35.205812,-106.658503)*/
 
 			var options = {zoom: 16, center: gmap, mapTypeId: google.maps.MapTypeId.ROADMAP,
 				zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL},
@@ -33,14 +33,14 @@ function initialize() {
 
 			var bbikebeginsMarker = new google.maps.Marker({position: bbikebegins, title: "Bike Lane Resumes"});
 				bbikebeginsMarker.setMap(map);
-			var cEllisonMarker = new google.maps.Marker({position: cEllison, title:	"Point a"});
+			/*var cEllisonMarker = new google.maps.Marker({position: cEllison, title:	"Point a"});
 				cEllisonMarker.setMap(map);
 			var dEllisonMarker = new google.maps.Marker({position: dEllison, title: "Point b"});
 				dEllisonMarker.setMap(map);
 			var eEllisonMarker = new google.maps.Marker({position: eEllison, title: "Point c"});
 				eEllisonMarker.setMap(map);
 			var fEllisonMarker = new google.maps.Marker({position: fEllison, title: "Point d"});
-				fEllisonMarker.setMap(map);
+				fEllisonMarker.setMap(map);*/
 
 			var EllisonCoordinates = [aEllison, new google.maps.LatLng(35.205628,-106.656861),
 												new google.maps.LatLng(35.206241,-106.655295),
