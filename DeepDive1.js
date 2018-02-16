@@ -64,4 +64,6 @@ function initialize() {
 				coordPoly.setMap(map);
 
 			var bikelayer = new google.maps.BicyclingLayer();
-				bikelayer.setMap(map);}
+				bikelayer.setMap(map);
+
+			}
