@@ -49,7 +49,7 @@ function initialize() {
 			var EllisonPath = new google.maps.Polyline({ path: EllisonCoordinates, strokeColor:	"#020202", strokeOpacity:1.0, strokeWeight:3});
 				EllisonPath.setMap(map);
 
-			/*var ployCoordinates = [	new google.maps.LatLng(35.205488,-106.658685),
+			var ployCoordinates = [	new google.maps.LatLng(35.205488,-106.658685),
 									new google.maps.LatLng(35.205488,-106.656765),
 									new google.maps.LatLng(35.206022,-106.655284),
 									new google.maps.LatLng(35.207215,-106.653771),
@@ -59,7 +59,7 @@ function initialize() {
 									new google.maps.LatLng(35.206426,-106.65537),
 									new google.maps.LatLng(35.205847,-106.656818),
 									new google.maps.LatLng(35.205812,-106.658503),
-								];*/
+								];
 			var coordPoly = new google.maps.Polygon ({ path: ployCoordinates, strokeColor:	"#FF0202", strokeOpacity:0.8, strokeWeight:2, fillColor: "FF0000", fillOpacity: .35});
 				coordPoly.setMap(map);
 
