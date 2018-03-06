@@ -1,0 +1,145 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+	<title>GEO585L Internet Mapping</title>
+    <style type=text/css>
+	body{background-color: #CCFFFF;
+        margin-left:5%;
+		margin-right:5%;
+		margin-top:3%;
+		margin-bottom:4%}
+        p{text-indent:2em;margin-top:0;margin-bottom:0;}
+        .hfont {font-family:Century Gothic}
+        .para1 {font-family:Verdana,sans-serif;font-size:14px}
+        .para2 {font-family:Verdana,sans-serif;font-size:14px;margin-top:1em;margin-bottom:0}
+		.para3 {font-family:Verdana,sans-serif;font-size:14px;margin-top:0em;margin-bottom:0}
+    </style>
+</head>
+	<body>
+	    <table width="800">
+		<h3 class="hfont">Gary Werito</h3>
+
+		<h2 class="hfont">Deep Dive 2</h2>
+
+
+		<h4 class="hfont">Question 1</h4>
+		<p class="para1">What request type is common across all three (WMS, WFS, WCS) OGC web services that we have studied?</p>
+
+		<p class="para2"><strong>Answerr:</strong> </p>
+		<p class="para2"> "GetCapabilities" is most common of all three (WMS,WFS,WCS) OGC web services.</p>
+
+		<h4 class="hfont">Question 2</h4>
+		<p class="para1">2-A What are the required parameters, and what do they represent?</p>
+		<p class="para1">2-B What is returned in response to a WMS GetCapabilities request?</p>
+
+		<p class="para2"><strong><i>Answers:</i></strong> </p>
+		<p class="para2">2-A The required parameters are "SERVICE=WMS"("service type") and "REQUEST=GetCapabilities" ("request name").</p>
+		<p class="para2">2-B It returns the "Service Metadata" XML file representing information about specific WMS service and its layers.</p>
+
+		<h4 class="hfont">Question 3</h4>
+		<p class="para1">3-A What are the required parameters, and what do they represent?</p>
+		<p class="para1">3-B What is returned in response to a WMS GetMap request?</p>
+		<p class="para1">3-C What is the significance of transparency in WMS requests?</p>
+
+		<p class="para2"><strong><i>Answers:</i></strong> </p>
+		<p class="para2">3-A The required parameters and representatives are:</p>
+		<p class="para2">
+		    <ul>
+			<li class="para3">VERSION=version, Request version.</li>
+			<li class="para3">REQUEST=GetMap, Request name.</li>
+			<li class="para3">LAYERS=layer_list, Comma-separated list of one or more map layers.</li>
+			<li class="para3">STYLES=style_list, Comma-separated list of one rendering style per requested layer.</li>
+			<li class="para3">SRS=namespace:identifier, Spatial Reference System.</li>
+			<li class="para3">BBOX=minx,miny,maxx,maxy, Bounding box corners (lower left, upper right) in SRS units.</li>
+			<li class="para3">WIDTH=output_width, Width in pixels of map area.</li>
+			<li class="para3">HEIGHT=output_height, Height in pixels of map area.</li>
+			<li class="para3">FORMAT=output_format, Output format of map type.</li>
+			</ul>
+			</p>
+		<p class="para2">3-B It returns a "Map Images" representing one or more layers from a WMS serviced area.</p>
+		<p class="para2">3-C The significance of transparency allows the layer to be used as an overlay, while being able to show
+		the underlying layers.</p>
+
+		<h4 class="hfont">Question 4</h4>
+		<p class="para1">What OGC request would you use to inform the configuration of a client application (like ArcGIS) about
+		    an OGC service that you want to add layers from?</p>
+
+		<p class="para2"><strong><i>Answer:</i></strong> </p>
+		<p class="para2"> The "GetCapabilites" request would be used to inform the client's application about
+		    what the service may offer.</p>
+
+		<h4 class="hfont">Question 5</h4>
+		<p class="para1">5-A You want a map image representing three layers of data in a single JPEG for a specified area of interest.</p>
+		<p class="para1">5-B You want to retrieve data representing geometries and associated attributes for a road network, with the returned data in GML.</p>
+		<p class="para1">5-C You want to retrieve data representing a digital elevation model (a raster dataset) in the form of a GeoTIFF.</p>
+
+		<p class="para2"><strong><i>Answers:</i></strong> </p>
+		<p class="para2">5-A WMS, GetMap request.</p>
+		<p class="para2">5-B WFS, GetFeature request.</p>
+		<p class="para2">5-C WCS, GetCoverage request.</p>
+
+		<h4 class="hfont">Question 6</h4>
+		<p class="para1">6-A WGS 84 (Geodetic CRS [geographic 2d])</p>
+		<p class="para1">6-B NAD83 / UTM zone 13N</p>
+		<p class="para1">6-C NAD27 / UTM zone 13N</p>
+
+		<p class="para2"><strong><i>Answers:</i></strong> </p>
+		<p class="para2">6-A EPSG code is EPSG:4326.</p>
+		<p class="para2">6-B EPSG code is EPSG:26913.</p>
+		<p class="para2">6-C EPSG:26713.</p>
+
+		<h4 class="hfont">Question 7</h4>
+		<p class="para1">7-A What is the Title of the service?</p>
+		<p class="para1">7-B Who is the Contact Person for questions about the service?</p>
+		<p class="para1">7-C What are the available image formats for the GetMap request for this service?</p>
+		<p class="para1">7-D What are the SRS/CRS�s for which layers from this service are available (remember that nested layers inherit the SRS/CRS of their parent layers).</p>
+
+		<p class="para2"><strong><i>Answers:</i></strong> </p>
+		<p class="para2">7-A "tl_2010_35_bg10".</p>
+		<p class="para2">7-B "GStore Support" listing his phone number, email and mail address.</p>
+		<p class="para2">7-C The available image formats are listed:</p>
+		<p class="para2">
+		<ul>
+			<li class="para3">image/png</li>
+			<li class="para3">image/gif</li>
+			<li class="para3">image/jpeg</li>
+			<li class="para3">image/png; mode=24bit</li>
+			<li class="para3">image/tiff</li>
+			<li class="para3">application/vnd.google-earth.kml+xml</li>
+			<li class="para3">application/vnd.google-earth.kmz</li>
+		</ul>
+		</p>
+		<p class="para2">7-D The SRS/CRS's available are listed:</p>
+		<p class="para3">
+		<ul>
+			<li class="para3">EPSG:4269</li>
+			<li class="para3">EPSG:4326</li>
+			<li class="para3">EPSG:4267</li>
+			<li class="para3">EPSG:26913</li>
+			<li class="para3">EPSG:26912</li>
+			<li class="para3">EPSG:26914</li>
+			<li class="para3">EPSG:26713</li>
+			<li class="para3">EPSG:26712</li>
+			<li class="para3">EPSG:26714</li>
+			<li class="para3">EPSG:3857</li>
+		</ul>
+		</p>
+
+		<h4 class="hfont">Question 8</h4>
+		<p class="para1">Formulate a GetMap request for the tl_2010_35_bg10 layer from this service, for a 500x500 pixel map image that is 0.05-degrees wide and 0.05-degress high, with the SW corner of the map image located at 35�N and -106�45�E (EPSG:4326). Include in your write-up the complete GetMap request.</p>
+
+		<p class="para2"><strong><i>Answer:</i></strong> </p>
+
+		<p"http://gstore.unm.edu/apps/rgis/datasets/715663ba-c1c3-414c-84a7-c671526f8316/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-106,35,-105.95,35.05&LAYERS=tl_2010_35_bg10&WIDTH=500&HEIGHT=500&SRS=EPSG:4326&FORMAT=image/png">
+		 http://gstore.unm.edu/apps/rgis/datasets/715663ba-c1c3-414c-84a7-c671526f8316/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-106.05,35,-105.95,35.05&LAYERS=tl_2010_35_bg10&WIDTH=500&HEIGHT=500&SRS=EPSG:4326&FORMAT=image/png"</p>
+		 <br><br/>
+		 <p>
+		 			<a href="https://gwerito2.github.io/werito_geog585L/index.html"><center>Home Page</center></a>
+		 </p>
+		 <!--This is your address, https://gwerito2.github.io/werito_geog585L/DeepDive2.html-->
+		</table>
+	</body>
+</html>
