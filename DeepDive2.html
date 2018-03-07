@@ -29,23 +29,23 @@
 		<p class="para1">What request type is common across all three (WMS, WFS, WCS) OGC web services that we have studied?</p>
 
 		<p class="para2"><strong>Answerr:</strong> </p>
-		<p class="para2"> "GetCapabilities" is most common of all three (WMS,WFS,WCS) OGC web services.</p>
+		<p class="para2"> GetCapabilities is most common of all three OGC web services.</p>
 
 		<h4 class="hfont">Question 2</h4>
-		<p class="para1">2-A What are the required parameters, and what do they represent?</p>
-		<p class="para1">2-B What is returned in response to a WMS GetCapabilities request?</p>
+		<p class="para1">A What are the required parameters, and what do they represent?</p>
+		<p class="para1">B What is returned in response to a WMS GetCapabilities request?</p>
 
 		<p class="para2"><strong><i>Answers:</i></strong> </p>
-		<p class="para2">2-A The required parameters are "SERVICE=WMS"("service type") and "REQUEST=GetCapabilities" ("request name").</p>
-		<p class="para2">2-B It returns the "Service Metadata" XML file representing information about specific WMS service and its layers.</p>
+		<p class="para2">A The required parameters are "SERVICE=WMS"("service type") and "REQUEST=GetCapabilities" ("request name").</p>
+		<p class="para2">B It returns the "Service Metadata" XML file representing information about specific WMS service and its layers.</p>
 
 		<h4 class="hfont">Question 3</h4>
-		<p class="para1">3-A What are the required parameters, and what do they represent?</p>
-		<p class="para1">3-B What is returned in response to a WMS GetMap request?</p>
-		<p class="para1">3-C What is the significance of transparency in WMS requests?</p>
+		<p class="para1">A What are the required parameters, and what do they represent?</p>
+		<p class="para1">B What is returned in response to a WMS GetMap request?</p>
+		<p class="para1">C What is the significance of transparency in WMS requests?</p>
 
 		<p class="para2"><strong><i>Answers:</i></strong> </p>
-		<p class="para2">3-A The required parameters and representatives are:</p>
+		<p class="para2">A The required parameters and representatives are:</p>
 		<p class="para2">
 		    <ul>
 			<li class="para3">VERSION=version, Request version.</li>
@@ -59,8 +59,8 @@
 			<li class="para3">FORMAT=output_format, Output format of map type.</li>
 			</ul>
 			</p>
-		<p class="para2">3-B It returns a "Map Images" representing one or more layers from a WMS serviced area.</p>
-		<p class="para2">3-C The significance of transparency allows the layer to be used as an overlay, while being able to show
+		<p class="para2">B It returns a "Map Images" representing one or more layers from a WMS serviced area.</p>
+		<p class="para2">C The significance of transparency allows the layer to be used as an overlay, while being able to show
 		the underlying layers.</p>
 
 		<h4 class="hfont">Question 4</h4>
@@ -68,39 +68,39 @@
 		    an OGC service that you want to add layers from?</p>
 
 		<p class="para2"><strong><i>Answer:</i></strong> </p>
-		<p class="para2"> The "GetCapabilites" request would be used to inform the client's application about
+		<p class="para2"> The GetCapabilites request would be used to inform the client's application and
 		    what the service may offer.</p>
 
 		<h4 class="hfont">Question 5</h4>
-		<p class="para1">5-A You want a map image representing three layers of data in a single JPEG for a specified area of interest.</p>
-		<p class="para1">5-B You want to retrieve data representing geometries and associated attributes for a road network, with the returned data in GML.</p>
-		<p class="para1">5-C You want to retrieve data representing a digital elevation model (a raster dataset) in the form of a GeoTIFF.</p>
+		<p class="para1">A You want a map image representing three layers of data in a single JPEG for a specified area of interest.</p>
+		<p class="para1">B You want to retrieve data representing geometries and associated attributes for a road network, with the returned data in GML.</p>
+		<p class="para1">C You want to retrieve data representing a digital elevation model (a raster dataset) in the form of a GeoTIFF.</p>
 
 		<p class="para2"><strong><i>Answers:</i></strong> </p>
-		<p class="para2">5-A WMS, GetMap request.</p>
-		<p class="para2">5-B WFS, GetFeature request.</p>
-		<p class="para2">5-C WCS, GetCoverage request.</p>
+		<p class="para2">A WMS, GetMap request.</p>
+		<p class="para2">B WFS, GetFeature request.</p>
+		<p class="para2">C WCS, GetCoverage request.</p>
 
 		<h4 class="hfont">Question 6</h4>
-		<p class="para1">6-A WGS 84 (Geodetic CRS [geographic 2d])</p>
-		<p class="para1">6-B NAD83 / UTM zone 13N</p>
-		<p class="para1">6-C NAD27 / UTM zone 13N</p>
+		<p class="para1">A WGS 84 (Geodetic CRS [geographic 2d])</p>
+		<p class="para1">B NAD83 / UTM zone 13N</p>
+		<p class="para1">C NAD27 / UTM zone 13N</p>
 
 		<p class="para2"><strong><i>Answers:</i></strong> </p>
-		<p class="para2">6-A EPSG code is EPSG:4326.</p>
-		<p class="para2">6-B EPSG code is EPSG:26913.</p>
-		<p class="para2">6-C EPSG:26713.</p>
+		<p class="para2">A EPSG code is EPSG:4326.</p>
+		<p class="para2">B EPSG code is EPSG:26913.</p>
+		<p class="para2">C EPSG:26713.</p>
 
 		<h4 class="hfont">Question 7</h4>
-		<p class="para1">7-A What is the Title of the service?</p>
-		<p class="para1">7-B Who is the Contact Person for questions about the service?</p>
-		<p class="para1">7-C What are the available image formats for the GetMap request for this service?</p>
-		<p class="para1">7-D What are the SRS/CRS�s for which layers from this service are available (remember that nested layers inherit the SRS/CRS of their parent layers).</p>
+		<p class="para1">A What is the Title of the service?</p>
+		<p class="para1">B Who is the Contact Person for questions about the service?</p>
+		<p class="para1">C What are the available image formats for the GetMap request for this service?</p>
+		<p class="para1">D What are the SRS/CRS�s for which layers from this service are available (remember that nested layers inherit the SRS/CRS of their parent layers).</p>
 
 		<p class="para2"><strong><i>Answers:</i></strong> </p>
-		<p class="para2">7-A "tl_2010_35_bg10".</p>
-		<p class="para2">7-B "GStore Support" listing his phone number, email and mail address.</p>
-		<p class="para2">7-C The available image formats are listed:</p>
+		<p class="para2">A "tl_2010_35_bg10".</p>
+		<p class="para2">B "GStore Support" listing his phone number, email and mail address.</p>
+		<p class="para2">C The available image formats are listed:</p>
 		<p class="para2">
 		<ul>
 			<li class="para3">image/png</li>
@@ -112,7 +112,7 @@
 			<li class="para3">application/vnd.google-earth.kmz</li>
 		</ul>
 		</p>
-		<p class="para2">7-D The SRS/CRS's available are listed:</p>
+		<p class="para2">D The SRS/CRS's available are listed:</p>
 		<p class="para3">
 		<ul>
 			<li class="para3">EPSG:4269</li>
