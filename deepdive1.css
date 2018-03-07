@@ -16,6 +16,11 @@ html { height: 50%}
 				top: 10%;
 				border: 1px solid #999999}
 
+			#map_canvas1 { width:400px;
+				height:300px;
+				margin-left: auto;
+				margin-right: auto}
+
 			#gwtopheader {
 				clear:both;
 				border: 1px solid #999999;

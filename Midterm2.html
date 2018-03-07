@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Google Map of Stonehenge</title>
+    <h1><center>Google Map of Stonehenge</center></h1>
+    <style>
+
+      #map { width:400px;
+				height:300px;
+				margin-left: auto;
+				margin-right: auto}
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #ccffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        var stonehenge = {lng: -1.826214, lat: 51.178884};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,mapTypeId: google.maps.MapTypeId.SATELLITE,
+          center: stonehenge
+        });
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Stonehenge, England</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Stonehenge</b></p>'+
+            '<p></p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: stonehenge,
+          map: map,
+          title: 'Stongehenge, England'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyCBC5yu3qiXSwC6apquFf6S1oqWpTLI6lg&callback=initMap">
+    </script>
+    <a href="https://gwerito2.github.io/werito_geog585L/index.html"><center><u>Home Page</></center></a></br></br>
+      <!--This is your address, https://gwerito2.github.io/werito_geog585L/Midterm2.html-->
+  </body>
+</html>
