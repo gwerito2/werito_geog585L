@@ -1,0 +1,93 @@
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> -->
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Geography 585L OpenLayer Map</title>
+		<style type="text/css">
+			html { height: 50%}
+			body { height: 100%; margin: 10px; padding: 10px; background: #33C4FF; text-align: left}
+			#map_canvas { width:90%; height:80%; margin-left: auto; margin-right: auto}
+		</style>
+	<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js">
+	</script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.2&sensor=false">
+	</script>
+
+	<script type="text/javascript">
+	//Define variables
+	var lon = -106.469986;
+	var lat = 35.162933;
+	var zoom = 16;
+	var map;
+	var Openlayer;
+	var gmap;
+	var gter;
+
+	//Set Controls
+	var baseControls = [
+		new OpenLayers.Control.PanZoom({}),
+		new OpenLayers.Control.ScaleLine({}),
+		new OpenLayers.Control.Scale(),
+		new OpenLayers.Control.OverviewMap({})
+		];
+
+	//Initialize function
+	function init(){
+		map = new OpenLayers.Map('map', {
+		maxExtent: new OpenLayers.Bounds(
+		-128 * 156543.0339,
+		-128 * 156543.0339,
+		-128 * 156543.0339,
+		-128 * 156543.0339),
+		maxResolution: 156543.0339,
+		units: 'm',
+		projection: new OpenLayers.Projection('EPSG:900913'),
+		displayProjection: new OpenLayers.Projection('EPSG:4326'),
+		controls: baseControls
+		});
+
+	//OSM Map
+	Openlayer = new OpenLayers.Layer.OSM("Open Street Map");
+	map.addLayer(Openlayer);
+
+	//Google Map
+	gmap = new OpenLayers.Layer.Google(
+			"Google Street",	//default for Google
+			{numZoomLevels: 18}
+		);
+
+	//Google Terrain
+	gter = new OpenLayers.Layer.Google(
+			"Google Terrain",
+			{type: google.maps.MapTypeId.TERRAIN}
+		);
+
+	map.addLayers([gmap, gter]);
+
+	map.setCenter(
+		new OpenLayers.LonLat(lon,lat).transform(
+			new OpenLayers.Projection("EPSG:4326"),
+			map.getProjectionObject()
+			), zoom
+		);
+	map.addControl(new OpenLayers.Control.LayerSwitcher());
+	}
+	//End of function
+
+	</script>
+	</head>
+
+	<body onload="init()">
+	<div id="map"></div>
+	<h1><center><br/>Elena Gallegos Park<br/></center></h1>
+
+	<p>
+        <a href="https://gwerito2.github.io/werito_geog585L/index.html"><center>Home Page</center></a>
+	</p>
+</br>
+</br>
+	</body>
+</html>
+<!--//https://gwerito2.github.io/werito_geog585L/openlayers.html-->
