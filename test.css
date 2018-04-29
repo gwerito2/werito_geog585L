@@ -1,17 +1,26 @@
-//Based on examples from OpenLayers and code from Stamen
+body {
+  width:100%;
+  height:100%
+  }
 
-var map = new ol.Map({
-            target: 'map',
-            layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.Stamen({
-                        layer: 'terrain'
-                    })
-                }),
+  #map,.map {
+    width:600px;
+    height:400px;
+    }
 
-            ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([-115.368205, 42.206283]),
-                zoom: 10
-            })
-        })
+  #map_selector li {
+    cursor:pointer;
+    width:350px;
+    }
+
+  #map_selector li:hover {
+    background-color: yellow;
+    }
+
+
+
+  #map div.ol-viewport div.ol-overlaycontainer-stopevent
+    div.ol-overviewmap.ol-unselectable.ol-control.ol-uncollapsible {
+    top: 200px;
+    bottom: 300px;
+    }

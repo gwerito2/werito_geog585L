@@ -1,26 +1,22 @@
-<!doctype html>
-<!--Based on examples from OpenLayers-->
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
-    <style>
-        html { height: 50%}
-        body { height: 100%; margin: 10px; padding: 10px; background: #CCFFCC; text-align: left}
-        .map { width:90%; height:80%; margin-left: auto; margin-right: auto}
-        h1 {text-align: center;}
-        h2 {text-align: center;}
+<html>
 
-    </style>
-    <script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
-    <title>OpenLayers</title>
-</head>
+<head>
+    <link rel="stylesheet" href="css/test.css" type="text/css">
 
-<body>
-    <h1>Elena Gallegos Map</h1>
-    <div id="map" class="map"></div>
-    <script src=test.js></script>
-    <h2><center>Gary Werito<br/>OpenLayers Map<br/></center></h2>
-	<p>
-        <a href="https://gwerito2.github.io/werito_geog585L/index.html"><center>Home Page</center></a>
-</body>
-</html>
+    <!-- these two files are imported from a host that provides a hosted full
+      build of the OpenLayers package for development as documented here:
+      https://openlayers.org/download/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js" type="text/javascript"></script>
+ </head>
+
+ <body>
+      <h1>This is a very simple OpenLayers 4 sample map page</h1>
+
+      <div id="map" class="map"></div>
+
+      <!-- import the external Javascript file with the map configuration code -->
+      <script src="js/test.js" type="text/javascript"></script>
+    </body>
+
+ </html>
