@@ -1,4 +1,3 @@
-
 var myNewRotate = new ol.control.Rotate({autoHide:false})
 var myScaleLine = new ol.control.ScaleLine()
 var myOverviewMap = new ol.control.OverviewMap({collapsible:false, collapsed:false})
@@ -21,7 +20,8 @@ var map = new ol.Map({
                 center: ol.proj.fromLonLat([-106.469986, 35.162933]),
                 zoom: 16
             })
-					});
+
+          });
 
 
 map.addControl(new ol.control.ScaleLine({units: 'us'}));
