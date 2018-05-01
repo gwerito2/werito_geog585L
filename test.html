@@ -1,59 +1,45 @@
-<!DOCTYPE html>
+
 <html>
-  <head>
-    <title>TEST</title>
-    <link
-      rel="stylesheet"
-      href="chaco_plain.css"
-      type="text/css">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Geography 585L Week 12</title>
+		<style type="text/css">
 
-    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
-  </head>
-  <body>
-    <h1>Elena Gallegos Map</h1>
-    <div id="map" class="map"></div>
-    <script>
-      var openCycleMapLayer = new ol.layer.Tile({
-        source: new ol.source.OSM({
-        })
-      });
-      var vector = new ol.layer.Vector({
-        source: new ol.source.Vector({
-          url: 'https://openlayers.org/en/v4.6.5/examples/data/kml/2012-02-10.kml',
-          format: new ol.format.KML()
-        })
-      });
-      var raster = new ol.layer.Tile({
-        source: new ol.source.BingMaps({
-          imagerySet: 'Aerial',
-          key: 'AtCyev89S5Jt7LpjuH9lbnLvfeLqD8ALIyiJx_EwDc43_8uGa_ZU8ZNMry7sIo2A'
-        })
-      });
-      // var vector = new ol.layer.Vector({
-      //   source: new ol.source.Vector({
-      //     url: 'https://openlayers.org/en/v4.6.5/examples/data/kml/2012-02-10.kml',
-      //     format: new ol.format.KML()
-      //   })
-      // });
+			body { height: 100%;
+				margin: 40px; <!--40px-->
+				padding: 40px;
+				background: lightsteelblue;
+				text-align: left}
 
-      var map = new ol.Map({
-        layers: [
-          vector,
-          raster,
-          openCycleMapLayer
-        ],
-        target: 'map',
-        controls: ol.control.defaults({
-          attributionOptions: {
-            collapsible: false
-          }
-        }),
-        view: new ol.View({
-          maxZoom: 18,
-          center: ol.proj.fromLonLat([-106.469986, 35.162933]),
-          zoom: 16
-        })
-      });
-    </script>
-  </body>
-</html>
+		</style>
+	</head>
+	<body>
+	<h2><center>
+	Gary Werito<br>
+  4/30/2018<br/>
+	QGIS</center></h2>
+
+	<h3><i>WMS and WFS Access in Quantum GIS (QGIS)</i></h3>
+
+		<p>EDAC&#39;s Imagery WMS Service:<br/>
+		&#34;http://edacwms.unm.edu/cgi-bin/mapfiles/edacimagery?SERVICE=WMS&REQUEST=GetCapabilities&#34;</p>
+		<p><img src="Images/EDAC.jpg"></p>		<ol></ol><br/>
+
+		<p>FEMA&#39;s National Flood Hazard Layer WMS Service:<br/> &#34;http://hazards.fema.gov/wmsconnector/wmsconnector/com.esri.wms.Esrimap/NFHL?REQUEST=GetCapabilities&SERVICE=WMS&#34;</p>
+		<p><img src="Images/FEMA.jpg"></p>		<ol></ol><br/>
+
+		<p>NRCS Soil Data Mart WMS Service:<br/>
+		&#34;http://SDMDataAccess.nrcs.usda.gov/Spatial/SDM.wms?SERVICE=WMS&REQUEST=GetCapabilities&#34;</p>
+		<p><img src="Images/SDM.jpg"></p>		<ol></ol><br/>
+
+		<p>RGIS Roads &#40;RDSGPS2012v1&#41;<br/>&#34;http://gstore.unm.edu/apps/rgis/datasets/2f4ccda4-a76e-4df0-849e-ee51dbfec492/services/ogc/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=RDSGPS2012v1&SRSNAME=EPSG:26913&#34;</p>
+		<p><img src="Images/RGIS1.jpg"></p>	<ol></ol><br/>
+
+		<p>RGIS 500 Ft Countours Intervals &#40;hyp2shp&#41;<br/>&#34;http://gstore.unm.edu/apps/rgis/datasets/c0324950-6f96-49e4-a638-da7423c71ec3/services/ogc/wms?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=hyp2shp&SRSNAME=EPSG:4269&#34;</p>
+		<p><img src="Images/RGIS2.jpg"></p>	<ol></ol><br/>
+
+		<p>RGIS Areawater &#40;tl_2010_35001_areawater&#41;<br/>&#34;http://gstore.unm.edu/apps/rgis/datasets/d2802611-609c-44e2-951f-cb3f713eac07/services/ogc/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=tl_2010_35001_areawater&SRSNAME=EPSG:4269&#34;</p>
+		<p><img src="Images/RGIS3.jpg"></p>	<ol></ol>
+		<br/><br/>
+
+             <a href="https://gwerito2.github.io/werito_geog585L/index.html"><center>Home Page</center></a>
