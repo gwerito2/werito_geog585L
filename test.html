@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Milestone 9</title>
+    <title>TEST</title>
     <link
       rel="stylesheet"
       href="chaco_plain.css"
       type="text/css">
-    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+
     <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
   </head>
   <body>
@@ -18,19 +17,24 @@
         source: new ol.source.OSM({
         })
       });
-
-      var raster = new ol.layer.Tile({
-        source: new ol.source.BingMaps({
-          imagerySet: 'Aerial',
-          key: 'AtCyev89S5Jt7LpjuH9lbnLvfeLqD8ALIyiJx_EwDc43_8uGa_ZU8ZNMry7sIo2A'
-        })
-      });
       var vector = new ol.layer.Vector({
         source: new ol.source.Vector({
           url: 'https://openlayers.org/en/v4.6.5/examples/data/kml/2012-02-10.kml',
           format: new ol.format.KML()
         })
       });
+      var raster = new ol.layer.Tile({
+        source: new ol.source.BingMaps({
+          imagerySet: 'Aerial',
+          key: 'AtCyev89S5Jt7LpjuH9lbnLvfeLqD8ALIyiJx_EwDc43_8uGa_ZU8ZNMry7sIo2A'
+        })
+      });
+      // var vector = new ol.layer.Vector({
+      //   source: new ol.source.Vector({
+      //     url: 'https://openlayers.org/en/v4.6.5/examples/data/kml/2012-02-10.kml',
+      //     format: new ol.format.KML()
+      //   })
+      // });
 
       var map = new ol.Map({
         layers: [
