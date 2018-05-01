@@ -1,22 +1,55 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>Milestone 9</title>
+    <link
+      rel="stylesheet"
+      href="chaco_plain.css"
+      type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+  </head>
+  <body>
+    <h1>Elena Gallegos Map</h1>
+    <div id="map" class="map"></div>
+    <script>
+      var openCycleMapLayer = new ol.layer.Tile({
+        source: new ol.source.OSM({
+        })
+      });
 
-<head>
-    <link rel="stylesheet" href="css/test.css" type="text/css">
+      var raster = new ol.layer.Tile({
+        source: new ol.source.BingMaps({
+          imagerySet: 'Aerial',
+          key: 'AtCyev89S5Jt7LpjuH9lbnLvfeLqD8ALIyiJx_EwDc43_8uGa_ZU8ZNMry7sIo2A'
+        })
+      });
+      var vector = new ol.layer.Vector({
+        source: new ol.source.Vector({
+          url: 'https://openlayers.org/en/v4.6.5/examples/data/kml/2012-02-10.kml',
+          format: new ol.format.KML()
+        })
+      });
 
-    <!-- these two files are imported from a host that provides a hosted full
-      build of the OpenLayers package for development as documented here:
-      https://openlayers.org/download/ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js" type="text/javascript"></script>
- </head>
-
- <body>
-      <h1>This is a very simple OpenLayers 4 sample map page</h1>
-
-      <div id="map" class="map"></div>
-
-      <!-- import the external Javascript file with the map configuration code -->
-      <script src="js/test.js" type="text/javascript"></script>
-    </body>
-
- </html>
+      var map = new ol.Map({
+        layers: [
+          vector,
+          raster,
+          openCycleMapLayer
+        ],
+        target: 'map',
+        controls: ol.control.defaults({
+          attributionOptions: {
+            collapsible: false
+          }
+        }),
+        view: new ol.View({
+          maxZoom: 18,
+          center: ol.proj.fromLonLat([-106.469986, 35.162933]),
+          zoom: 16
+        })
+      });
+    </script>
+  </body>
+</html>

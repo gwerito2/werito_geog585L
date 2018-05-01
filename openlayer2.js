@@ -8,6 +8,7 @@ var myControls = ol.control.defaults({
 	zoom:true}).extend([myNewRotate,myScaleLine,myOverviewMap])
 
 
+
 var map = new ol.Map({
             target:'map',
             layers: [
