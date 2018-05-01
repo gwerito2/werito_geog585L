@@ -1,0 +1,95 @@
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Geography 585L Deep Dive 3</title>
+		<style type="text/css">
+
+			body { height: 100%;
+				margin: 40px; <!--40px-->
+				padding: 40px;
+				background: lightsteelblue;
+				text-align: left}
+
+		</style>
+	</head>
+	<body>
+	<h2><center>
+	Gary Werito<br>
+	4/30/2018<br/>
+	Mapping Project - Part 1</center></h2>
+
+		<p>1. What is the high-level description of the problem/question you want to help answer through the presentation of a collection of geographic data over the internet? Please answer in a short paragraph.</p>
+			<ol>DWI accidents have become an issue within the state of New Mexico. Accident locations vary within <br/>the City of Albuquerque, and most accidents happen within a few miles of establishments that serve alcohol.<br/> Establishing data on request requires time. Having the ability to view, access and update the data <br/>online as well as view prime locations using online map applications (Google). Agencies could access updated <br/>maps on the fly by request of WMS server or HTML web page. </ol>
+
+
+		<p>2. Who is the target audience for the information you want to provide?</p>
+			<ol>General public, Professional and Law enforcement agencies.</ol>
+
+
+		<p>3. What geographic region does your problem area represent? Please describe it in words (e.g. New Mexico, Alberta Canada, etc.) and define it in terms of a geographic (WGS84) (latitude and longitude) bounding box.</p>
+			<ol>Area: New Mexico<br/>
+				LatLonBoundingBox minx="-107.2" miny="34.8" maxx="-106.1" maxy="35.2"</ol>
+
+
+		<p>4. What types of data do you want to include in your project? Include a description (data content: e.g. elevation data, hydrographic survey, etc.) and types (i.e. raster, vector).</p>
+			<ol>Raster: Ortho Imagery - background (optional)<br/>
+				Vector: Reclassified Streets layer (line vector)<br/>
+				Vector: Reclassified Land Use layer(polygon vector)</ol>
+
+
+		<p>5. What projection will you use for the presentation of your project data? Again, describe it, provide your reasoning for selection, and provide the corresponding EPSG code.</p>
+			<ol>EPSG:26913 - NAD83 / UTM zone 13N</ol>
+
+
+		<p>6. Where do you anticipate acquiring data for the project from?</p>
+			<ol>CABQ/GIS (City of Albuquerque)<br/>
+				Bernco ( Bernalillo County)</ol>
+
+
+		<p>7. What barriers to acquiring and processing the needed data do you anticipate?</p>
+			<ol>Create an Excel file from the PDF LandUse code, then joined with the LandUse shapefile.<br/>
+				Reclassified LandUse shapefile to extract restaurants that serve alcohol and bars.<br/>
+				Reclassified Streets shapefile to extract main streets near accidents.</ol><br/>
+
+
+	<h3><i>While you are going to continue to acquire additional data for the project over the next couple of assignments, begin acquiring data for your selected project now. Specifically, find 5 datasets that are consistent with your description of the problem you are going to work on, and use ogrinfo or gdalinfo and any associated metadata to describe them in brief by answering the following questions:</i></h3>
+
+
+		<p>1. What is the name of the dataset?</p>
+		<p>2. What type of data (raster/vector) are in the dataset?</p>
+		<p>3. What is its format?</p>
+		<p>4. What is its coordinate reference system?</p>
+		<p>5. What are the spatial extents of the dataset?</p><br/>
+		<p>	ESRI World Imagery<br/>
+			Raster<br/>
+			JPEG<br/>
+			Vector:  Netcurr<br/>
+			-180, -90, 90, 180<br/><br/>
+
+			City of Albuquerque; netcurr (streets)<br/>
+			Vector (line)<br/>
+			SHP<br/>
+			NAD 83<br/>
+			-107.2, 35.2, -106.1, 34.8<br/><br/>
+
+			City of Albuquerque; netcurr (modified)<br/>
+			Vector (line)<br/>
+			SHP<br/>
+			NAD 83<br/>
+			-107.2, 35.2, -106.1, 34.8<br/><br/>
+
+			City of Albuqueque; LandUse (Parcels)<br/>
+			Vector (polygon)<br/>
+			SHP<br/>
+			NAD 83<br/>
+			-107.2, 35.2, -106.1, 34.8<br/><br/><br/>
+
+			City of Albuqueque; LandUse (modified)<br/>
+			Vector (point)<br/>
+			SHP<br/>
+			NAD 83<br/>
+			-107.2, 35.2, -106.1, 34.8<br/><br/><br/>
+				<p>
+               <a href="http://129.24.63.138/~gwerito2/HomePage.html"><center>Home Page</center></a>
+				</p>
+<!--//http://129.24.63.138/~gwerito2/homework3.html-->
