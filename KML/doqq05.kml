@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<GroundOverlay>
+	<name>EDAC - Imagery - bmng2km</name>
+	<open>1</open>
+	<Icon>
+		<href>http://edacwms.unm.edu/cgi-bin/mapfiles/edacimagery?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;LAYERS=doqq05&amp;TRANSPARENT=TRUE&amp;FORMAT=image/jpeg&amp;STYLES=&amp;WIDTH=1024&amp;HEIGHT=1024</href>
+		<viewRefreshMode>onStop</viewRefreshMode>
+		<viewBoundScale>0.66</viewBoundScale>
+	</Icon>
+	<LatLonBox>
+		<north>35.10660235222272</north>
+		<south>35.10150095335204</south>
+		<east>-106.622721263138</east>
+		<west>-106.6320591758787</west>
+	</LatLonBox>
+</GroundOverlay>
+</kml>
