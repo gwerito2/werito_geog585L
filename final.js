@@ -67,7 +67,7 @@ url: 'http://internetmapping.net:8080/geoserver/wms?',
     layers: [bingMapsAerial,MajorRoads,Accident09, Accident08, POI],
     target: 'map',
     view: new ol.View({
-      center: ol.proj.transform([-106.629306, 35.105163], 'EPSG:4326', 'EPSG:3857'),
+      center: ol.proj.transform([-106.612381, 35.107033], 'EPSG:4326', 'EPSG:3857'),
       zoom: 13
        })
 
