@@ -1,5 +1,7 @@
 
 
+
+
   var sourceBingMaps = new ol.source.BingMaps({
     key: 'AhwSYoaOsn_O2z7569TCYGIWnjUVg4Fk3wN9OehNGUDuPT0Z3OqRvEzlTiHz90K-',
     imagerySet: 'Road',
@@ -14,6 +16,17 @@
     })
   });
 
+  var MajorRoads = new ol.layer.Tile({
+  title:'Major Roads',
+  source: new ol.source.TileWMS({
+  url: 'http://internetmapping.net:8080/geoserver/wms?',
+    params: {
+      LAYERS: 'ws_gwerito2:MajorStreets3',
+      FORMAT: 'image/png',
+      TRANSPARENT: true
+      },
+    })
+  })
 
 var Accident09 = new ol.layer.Tile({
 title:'2009 Accidents',
@@ -37,6 +50,7 @@ url: 'http://internetmapping.net:8080/geoserver/wms?',
     },
   })
 })
+
 var POI = new ol.layer.Tile({
 title:'Establishments',
 source: new ol.source.TileWMS({
@@ -50,11 +64,13 @@ url: 'http://internetmapping.net:8080/geoserver/wms?',
 })
 
   var map = new ol.Map({
-    layers: [bingMapsAerial,Accident09, Accident08, POI],
+    layers: [bingMapsAerial,MajorRoads,Accident09, Accident08, POI],
     target: 'map',
     view: new ol.View({
       center: ol.proj.transform([-106.629306, 35.105163], 'EPSG:4326', 'EPSG:3857'),
-      zoom: 12
+      zoom: 13
        })
 
-  });
+  })
+
+  map.addControl(new ol.control.LayerSwitcher());
